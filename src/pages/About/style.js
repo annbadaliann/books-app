@@ -14,7 +14,6 @@ const useStyles = makeStyles(() => ({
   content: {
       display: 'flex',
   }
-   
 }));
 
 export default useStyles;
