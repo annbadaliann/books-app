@@ -8,20 +8,12 @@ import {
   Switch,
 } from "react-router-dom";
 
-import Drawer from "@material-ui/core/Drawer";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
-import ExitToAppIcon from "@material-ui/icons/ExitToApp";
-import IconButton from "@material-ui/core/IconButton";
-import LocalShippingIcon from "@material-ui/icons/LocalShipping";
-import PeopleAltIcon from "@material-ui/icons/PeopleAlt";
+
 
 import { MuiThemeProvider } from "@material-ui/core";
 import Dashboard from "./layouts/Dashboard/Dashboard";
+import Auth from './pages/Auth/Auth'
 
 export default function App() {
   return (
@@ -31,8 +23,9 @@ export default function App() {
         {/* <NormalizeStyles /> */}
 
         <Switch>
-          <Route component={Login} path="/login" />
+          {/* <Route component={Auth} path="/auth" /> */}
           <Route component={Dashboard} path="/dashboard/:page" />
+          <Route component={Auth} path="/auth" />
         </Switch>
       </MuiThemeProvider>
     </BrowserRouter>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -17,9 +17,11 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Book({ book }) {
+ function Book({ book }) {
   const { title, author, language, description, totalPages, image } = book;
   const classes = useStyles();
+
+
 
   return (
     <Card className={classes.root}>
@@ -58,3 +60,5 @@ export default function Book({ book }) {
     </Card>
   );
 }
+
+export default memo(Book);
